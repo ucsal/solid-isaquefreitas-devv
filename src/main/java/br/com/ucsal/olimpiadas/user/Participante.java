@@ -26,6 +26,6 @@ public class Participante {
 	}
 
 	public void setEmail(String email) {
-		this.email = email;
-	}
+        ValidadorEmail.validar(email);
+         this.email = email;}
 }
