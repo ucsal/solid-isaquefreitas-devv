@@ -25,13 +25,9 @@ public class Questao {
 		return id;
 	}
 
-	public void setId(long id) {
-		this.id = id;
-	}
+	public void setId(long id) {this.id = id; }
 
-	public long getProvaId() {
-		return provaId;
-	}
+	public long getProvaId() {return provaId; }
 
 	public void setProvaId(long provaId) {
 		this.provaId = provaId;
@@ -61,19 +57,13 @@ public class Questao {
 	}
 
 	public void setAlternativaCorreta(char alternativaCorreta) {
-		this.alternativaCorreta = normalizar(alternativaCorreta);
+		this.alternativaCorreta = ValidadorAlternativa.normalizar(alternativaCorreta);
 	}
 
 	public boolean isRespostaCorreta(char marcada) {
-		return normalizar(marcada) == alternativaCorreta;
+		return ValidadorAlternativa.normalizar(marcada) == alternativaCorreta;
 	}
 
-	public static char normalizar(char c) {
-		char up = Character.toUpperCase(c);
-		if (up < 'A' || up > 'E') {
-			throw new IllegalArgumentException("Alternativa deve estar entre A e E.");
-		}
-		return up;
-	}
+
 
 }

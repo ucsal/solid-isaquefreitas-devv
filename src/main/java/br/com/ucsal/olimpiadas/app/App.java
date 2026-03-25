@@ -1,9 +1,6 @@
 package br.com.ucsal.olimpiadas.app;
 
-import br.com.ucsal.olimpiadas.prova.Prova;
-import br.com.ucsal.olimpiadas.prova.Questao;
-import br.com.ucsal.olimpiadas.prova.Resposta;
-import br.com.ucsal.olimpiadas.prova.Tentativa;
+import br.com.ucsal.olimpiadas.prova.*;
 import br.com.ucsal.olimpiadas.user.Participante;
 
 import java.util.ArrayList;
@@ -113,7 +110,7 @@ public class App {
 		System.out.print("Alternativa correta (A–E): ");
 		char correta;
 		try {
-			correta = Questao.normalizar(in.nextLine().trim().charAt(0));
+			correta = ValidadorAlternativa.normalizar(in.nextLine().trim().charAt(0));
 		} catch (Exception e) {
 			System.out.println("alternativa inválida");
 			return;
@@ -178,7 +175,7 @@ public class App {
 			System.out.print("Sua resposta (A–E): ");
 			char marcada;
 			try {
-				marcada = Questao.normalizar(in.nextLine().trim().charAt(0));
+				marcada = ValidadorAlternativa.normalizar(in.nextLine().trim().charAt(0));
 			} catch (Exception e) {
 				System.out.println("resposta inválida (marcando como errada)");
 				marcada = 'X';
