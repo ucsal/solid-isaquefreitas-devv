@@ -1,4 +1,10 @@
-package br.com.ucsal.olimpiadas;
+package br.com.ucsal.olimpiadas.app;
+
+import br.com.ucsal.olimpiadas.prova.Prova;
+import br.com.ucsal.olimpiadas.prova.Questao;
+import br.com.ucsal.olimpiadas.prova.Resposta;
+import br.com.ucsal.olimpiadas.prova.Tentativa;
+import br.com.ucsal.olimpiadas.user.Participante;
 
 import java.util.ArrayList;
 import java.util.List;
