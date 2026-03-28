@@ -35,7 +35,11 @@ public class Tentativa {
 	}
 
 	public List<Resposta> getRespostas() {
-		return respostas;
+		return new ArrayList<>(respostas);
 	}
+
+    public void adicionarResposta(Resposta resposta) {
+        respostas.add(resposta);
+    }
 
 }
