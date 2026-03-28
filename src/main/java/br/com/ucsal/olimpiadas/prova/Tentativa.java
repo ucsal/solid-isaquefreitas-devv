@@ -42,4 +42,14 @@ public class Tentativa {
         respostas.add(resposta);
     }
 
+    public int calcularAcertos() {
+        int acertos = 0;
+        for (Resposta resposta : respostas) {
+            if (resposta.isCorreta()) {
+                acertos++;
+            }
+        }
+        return acertos;
+    }
+
 }
