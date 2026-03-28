@@ -170,8 +170,10 @@ public class App {
             System.out.println("\nQuestão #" + q.getId());
             System.out.println(q.getEnunciado());
 
-            System.out.println("Posição inicial:");
-            imprimirTabuleiroFen(q.getFenInicial());
+            if (q.getFenInicial() != null && !q.getFenInicial().isBlank()) {
+                System.out.println("Posição inicial:");
+                imprimirTabuleiroFen(q.getFenInicial());
+            }
 
             for (var alt : q.getAlternativas()) {
                 System.out.println(alt);
