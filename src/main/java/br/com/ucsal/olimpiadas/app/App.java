@@ -64,7 +64,13 @@ public class App {
         var p = new Participante();
         p.setId(proximoParticipanteId++);
         p.setNome(nome);
-        p.setEmail(email);
+
+        try {
+            p.setEmail(email);
+        } catch (IllegalArgumentException e) {
+            System.out.println("email inválido");
+            return;
+        }
 
         participantes.add(p);
         System.out.println("Participante cadastrado: " + p.getId());
