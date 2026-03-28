@@ -43,7 +43,7 @@ public class Tentativa {
     }
 
     public int calcularAcertos() {
-        CalculadoraAcertos calculadora = new CalculadoraAcertos();
+        CalculadoraResultado calculadora = new CalculadoraAcertos();
         return calculadora.calcular(this);
     }
 
