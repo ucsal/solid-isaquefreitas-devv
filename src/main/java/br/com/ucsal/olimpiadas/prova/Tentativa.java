@@ -43,13 +43,8 @@ public class Tentativa {
     }
 
     public int calcularAcertos() {
-        int acertos = 0;
-        for (Resposta resposta : respostas) {
-            if (resposta.isCorreta()) {
-                acertos++;
-            }
-        }
-        return acertos;
+        CalculadoraAcertos calculadora = new CalculadoraAcertos();
+        return calculadora.calcular(this);
     }
 
 }
