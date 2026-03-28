@@ -1,4 +1,4 @@
-package br.com.ucsal.olimpiadas;
+package br.com.ucsal.olimpiadas.prova;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,16 @@ public class Tentativa {
 	}
 
 	public List<Resposta> getRespostas() {
-		return respostas;
+		return new ArrayList<>(respostas);
 	}
+
+    public void adicionarResposta(Resposta resposta) {
+        respostas.add(resposta);
+    }
+
+    public int calcularAcertos() {
+        CalculadoraResultado calculadora = new CalculadoraAcertos();
+        return calculadora.calcular(this);
+    }
 
 }

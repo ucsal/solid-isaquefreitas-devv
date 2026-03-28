@@ -1,4 +1,4 @@
-package br.com.ucsal.olimpiadas;
+package br.com.ucsal.olimpiadas.prova;
 
 public class Resposta {
 
@@ -19,7 +19,7 @@ public class Resposta {
 	}
 
 	public void setAlternativaMarcada(char alternativaMarcada) {
-		this.alternativaMarcada = alternativaMarcada;
+		this.alternativaMarcada = ValidadorAlternativa.normalizar(alternativaMarcada);
 	}
 
 	public boolean isCorreta() {

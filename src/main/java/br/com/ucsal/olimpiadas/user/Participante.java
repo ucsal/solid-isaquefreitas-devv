@@ -1,4 +1,4 @@
-package br.com.ucsal.olimpiadas;
+package br.com.ucsal.olimpiadas.user;
 
 public class Participante {
 	private long id;
@@ -26,6 +26,6 @@ public class Participante {
 	}
 
 	public void setEmail(String email) {
-		this.email = email;
-	}
+        ValidadorEmail.validar(email);
+         this.email = email;}
 }
